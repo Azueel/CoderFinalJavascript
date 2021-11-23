@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<title>Document</title>
+	</head>
+	<body class="bg-dark">
+		<h1 class="text-white text-center mt-3" id="title"></h1>
+		<div class="row">
+			<div class="col-lg-2">
+				<p id="error"></p>
+				<form id="agregarDinero">
+					<label class="text-white mb-3 mt-2 ms-3 fs-2">Nombre</label>
+					<input class="ms-3 d-block mb-3" id="name" type="text" />
+					<label class="text-white mb-3 mt-2 ms-3 fs-2">Ingrese Su dinero</label>
+					<input class="ms-3 d-block" type="number" id="numero" />
+					<button id="btnForm" type="submit" class="ms-3 mt-2 btn btn-success">
+						Ingresar
+					</button>
+				</form>
+
+				<div class="mt-5 ms-3">
+					<h3 class="text-white fs-2">
+						Tu dinero Actual es de:
+						<span class="text-success fw-bold fs-3" id="dineroActual"></span>
+					</h3>
+					<button class="btn btn-danger mt-4" disabled id="abandonar">Abandonar</button>
+				</div>
+			</div>
+
+			<div class="col-lg-8">
+				<div class="d-flex flex-column justify-content-center align-items-center">
+					<canvas id="canvas" width="500" height="500"></canvas>
+					<input
+						class="px-5 py-2 btn btn-danger"
+						type="button"
+						value="Spin"
+						id="spin"
+						disabled
+					/>
+					<button class="btn btn-success mt-5" disabled id="resetGame">
+						Nuevo Juego
+					</button>
+					<p class="text-white fs-3 fw-bold mt-5 text-center" id="mensaje"></p>
+
+					<h2 id="gameOver"></h2>
+					<p id="playerDate"></p>
+				</div>
+			</div>
+			<div class="col-lg-2">
+				<h3 class="text-white">Lista de maximos ganadores</h3>
+				<ol id="maxGanadores" class="text-white"></ol>
+			</div>
+		</div>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+
+		<script src="/components/ruleta.js"></script>
+	</body>
+</html>
